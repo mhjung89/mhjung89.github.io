@@ -1,27 +1,11 @@
-﻿<MudAppBar Color="Color.Transparent" Elevation="0">
-    <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start" OnClick="@((e) => DrawerToggle())" Class="d-flex d-sm-none" />
+﻿<MudAppBar Color="Color.Transparent" Elevation="0" DisableGutters="true" Style="max-width: 1280px; margin:  0 auto;">
     <MudLink Href="" Typo="Typo.h6" Color="Color.Dark" Class="ml-3">hedaal</MudLink>
     <MudSpacer />
-    <MudLink Href="blog" Typo="Typo.button" Class="mr-3 d-none d-sm-flex">Blog</MudLink>
-    <MudLink Href="portfolio" Typo="Typo.button" Class="mr-3 d-none d-sm-flex">Portfolio</MudLink>
+    <MudLink Href="blog" Typo="Typo.button" Class="mr-3">Blog</MudLink>
+    <MudLink Href="portfolio" Typo="Typo.button" Class="mr-3">Portfolio</MudLink>
     <MudSpacer />
-    <MudIconButton Icon="@Icons.Custom.Brands.MudBlazor" Color="Color.Inherit" Href="https://mudblazor.com/" Target="_blank" />
-    <MudIconButton Icon="@Icons.Custom.Brands.GitHub" Color="Color.Inherit" Href="https://github.com/MudBlazor/MudBlazor/" Target="_blank" />
+    <MudIconButton Icon="@Icons.Custom.Brands.GitHub" Color="Color.Inherit" Href="https://github.com/mhjung89" Target="_blank" />
 </MudAppBar>
-<MudDrawer @bind-Open="_drawerOpen" Elevation="1">
-    <MudDrawerHeader>
-        <MudText Typo="Typo.h6">hedaal</MudText>
-    </MudDrawerHeader>
-    <NavMenu />
-</MudDrawer>
 
 @code {
-    private MudTheme _theme = new MudTheme();
-
-    bool _drawerOpen;
-
-    void DrawerToggle()
-    {
-        _drawerOpen = !_drawerOpen;
-    }
 }
