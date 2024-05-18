@@ -10,7 +10,7 @@ public class BlogService
 #if DEBUG
     private readonly string _postsUrl = "posts/";
 #else
-        private readonly string _postsUrl = "https://raw.githubusercontent.com/mhjung89/blog/main/wwwroot/posts/";
+        private readonly string _postsUrl = "https://raw.githubusercontent.com/mhjung89/mhjung89.github.io/gh-pages/posts/";
 #endif
 
     public BlogService(HttpClient httpClient)
