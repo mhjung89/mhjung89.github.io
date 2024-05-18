@@ -12,8 +12,8 @@
         <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="8.0.2" PrivateAssets="all"/>
     </ItemGroup>
 
-    <ItemGroup>
-      <_ContentIncludedByDefault Remove="wwwroot\sample-data\weather.json" />
-    </ItemGroup>
-
+    <Target Name="GenerateMarkdownFileList" BeforeTargets="Build">
+        <Exec Command="dotnet run --project ../GenerateJsonPostList/GenerateJsonPostList.csproj" />
+    </Target>
+    
 </Project>
