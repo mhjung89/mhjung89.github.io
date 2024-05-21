@@ -13,6 +13,7 @@
     </ItemGroup>
 
     <Target Name="GenerateMarkdownFileList" BeforeTargets="Build">
+        <Exec Command="npm run publish:css" />
         <Exec Command="dotnet run --project ../GenerateJsonPostList/GenerateJsonPostList.csproj" />
     </Target>
     
