@@ -12,7 +12,12 @@
         <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="8.0.2" PrivateAssets="all"/>
     </ItemGroup>
 
-    <Target Name="GenerateMarkdownFileList" BeforeTargets="Build">
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="wwwroot\css\bootstrap\bootstrap.min.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\css\bootstrap\bootstrap.min.css.map" />
+    </ItemGroup>
+
+    <Target Name="Run BeforeBuild Process" BeforeTargets="Build">
         <Exec Command="npm run publish:css" />
         <Exec Command="dotnet run --project ../GenerateJsonPostList/GenerateJsonPostList.csproj" />
     </Target>
